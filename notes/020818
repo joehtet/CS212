@@ -1,0 +1,15 @@
+Quiz next thursday
+   topics string class, random class, something from next class
+
+string literal (s1 = "hello")
+string object  (s1 = new String("hello"))
+
+java pass by value
+
+compareTo
+substring
+charAt
+split
+
+java.util.Random
+nextInt(int n) - return random integer from 0 (inc.) to n (exc.)
