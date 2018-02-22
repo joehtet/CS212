@@ -6,13 +6,13 @@
 
 public class Circle {
 	private double r; // radius
-    private static double pi = 3.14159;
+    private final double pi = 3.14159;
     
-    public void Circle(double r) {
+    public Circle(double r) {
         this.r = r;
     }
  
-  	public void Circle() {
+  	public Circle() {
         this.r = 0;
   	}
   
