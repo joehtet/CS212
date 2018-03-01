@@ -1,0 +1,85 @@
+public class Practice_2 {
+
+    public int getTotal(int[][] a) {
+        int total = 0;
+        
+        // add all values in array
+        for(int i=0; i<a.length; i++) {
+            for(int j=0; j<a.length; j++) {
+                total += a[i][j];
+            }
+        }
+        
+        return total;
+    }
+    
+    public int getAverage(int[][] a) {
+        return getTotal(a)/ (a.length*a.length);
+    }
+    
+    public int getColumnTotal(int[][] a, int c) {
+        int columnTotal;
+        // sum through int[][c]
+        for(int i=0; i<a.length; i++) {
+            columnTotal += a[i][c];
+        }
+        return columnTotal;
+    }
+    
+    public int getRowTotal(int[][] a, int r) {
+        int rowTotal;
+        // sum through int[r][]
+        for(int i=0; i<a.length; i++) {
+            rowTotal += a[r][i];
+        }
+        return rowTotal;
+    }
+    
+    public int getHighestInRow(int[][] a, int r) {
+        int max = a[r][0];
+        
+        for(int i=0; i<a.length; i++) {
+            if(max < a[r][i]) {
+                max = a[r][i];
+            }
+        }
+        
+        return max;
+    }
+    
+    public int getLowestInRow(int[][] a, int r) {
+        int min = a[r][0];
+        
+        for(int i=0; i<a.length; i++) {
+            if(min > a[r][i]) {
+                min = a[r][i];
+            }
+        }
+        
+        return min;
+    }
+    
+    public static void main(String[] args) {
+        int array = { 
+            {0,1,2,3,4},
+            {7,8,9,10,11},
+            {1,1,2,3,5},
+            {8,13,21,34,55},
+            {-1,-2,-3,-4,-5}
+        }
+        
+        int total = getTotal(a);
+        int avg = getAverage(a);
+        int columnTotal = getColumnTotal(a, 0);
+        int rowTotal = getRowTotal(a,0);
+        int maxInRow = ;
+        int minInRow = getLowestInRow(a, 1);
+        
+        System.out.println("Total = " + getTotal(a));
+        System.out.println("Average = " + getAverage(a));
+        System.out.println("Total = " + getColumnTotal(a,0));
+        System.out.println("Total = " + getRowTotal(a,0));
+        System.out.println("Total = " +  getHighestInRow(a, 1));
+        System.out.println("Total = " + getLowestInRow(a, 1));
+    }
+}
